@@ -42,5 +42,24 @@ public class DynamicArrayTest {
 		assertThat(array.get(3), equalTo("c"));
 		assertThat(array.size(), equalTo(4));
 	}
+	
+	@Test
+	public void testDelete() {
+		array.add("a");
+        array.add("b");
+        array.add("c");
+
+        array.delete(1);
+        assertThat(array.size(), equalTo(2));
+        assertThat(array.get(0), equalTo("a"));
+		assertThat(array.get(1), equalTo("c"));
+	}
+	
+	@Test
+	public void testIsEmpty() {
+		assertTrue(array.isEmpty());
+		array.add("a");
+		assertFalse(array.isEmpty());
+	}
 
 }
