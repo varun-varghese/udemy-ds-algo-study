@@ -79,5 +79,14 @@ public class LinkedListTest {
 		linkedList.deleteLast();
 		assertThat(linkedList.size(), equalTo(0));
 	}
+	
+	@Test
+	public void testPrint() {
+		linkedList.addFirst("one");
+		linkedList.addFirst("two");
+		linkedList.addFirst("three");
+		
+		linkedList.print();
+	}
 
 }

@@ -85,5 +85,17 @@ public class LinkedList<T> {
 			first.next = null;
 		}
 	}
+	
+	public void print() {
+		StringBuilder sb = new StringBuilder();
+		Node<T> current  = head;
+		while (null != current.next) {
+			current = current.next;
+			sb.append(current.value).append(",");
+		}
+		int index = sb.lastIndexOf(",");
+		sb.delete(index, index + 1);
+		System.out.println(sb.toString());
+	}
 
 }
