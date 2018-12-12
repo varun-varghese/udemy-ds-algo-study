@@ -24,9 +24,12 @@ public class CompressorTest {
 	public void test() {
 		assertThat(compressor.compress("aaabbac"), equalTo("a3b2ac"));
 		assertThat(compressor.compress("aaabbaaacc"), equalTo("a3b2a3c2"));
+		assertThat(compressor.compress("aabb"), equalTo("aabb"));
 		assertThat(compressor.compress("abc"), equalTo("abc"));
 		assertThat(compressor.compress("ab"), equalTo("ab"));
 		assertThat(compressor.compress("a"), equalTo("a"));
+		assertThat(compressor.compress("zzz"), equalTo("z3"));
+		assertThat(compressor.compress("aabbaabb"), equalTo("aabbaabb"));
 	}
 
 }
