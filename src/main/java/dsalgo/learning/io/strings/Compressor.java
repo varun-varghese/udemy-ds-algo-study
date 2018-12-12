@@ -9,6 +9,32 @@ import java.util.Queue;
 // If the compressed string is not smaller than original, return original.
 public class Compressor {
 	
+	public String compressAlt(String input) {
+		StringBuilder sb = new StringBuilder();
+		
+		int count = 0;
+		for (int i = 0; i < input.length(); i++) {
+			count++;
+			
+			if (i + 1 >= input.length() || input.charAt(i) != input.charAt(i + 1)) {
+				sb.append(input.charAt(i));
+				
+				if (count > 1) {
+					sb.append(count);
+				}
+				count = 0;
+			}
+			
+		}
+		
+		String compressed = sb.toString();
+		if (compressed.length() < input.length()) {
+			return compressed;
+		} else {
+			return input;
+		}
+	}
+	
 	class CharCount {
 		char c;
 		int count;
