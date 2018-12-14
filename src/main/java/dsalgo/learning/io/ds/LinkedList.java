@@ -2,7 +2,7 @@ package dsalgo.learning.io.ds;
 
 public class LinkedList<T> {
 	
-	class Node<T> {
+	protected class Node<T> {
 		Node<T> next;
 		T value;
 		
@@ -12,6 +12,18 @@ public class LinkedList<T> {
 		
 		Node(T value) {
 			this.value = value;
+		}
+		
+		public Node<T> getNext() {
+			return next;
+		}
+		
+		public void setNext(Node<T> another) {
+			next = another;
+		}
+		
+		public T getValue() {
+			return value;
 		}
 	}
 	
@@ -43,6 +55,10 @@ public class LinkedList<T> {
 	
 	public T getLast() {
 		return getLastNode(head).value;
+	}
+	
+	public Node<T> getFirstNode() {
+		return head.next;
 	}
 	
 	public Node<T> getLastNode(Node<T> node) {
