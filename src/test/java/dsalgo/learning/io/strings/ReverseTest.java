@@ -26,5 +26,12 @@ public class ReverseTest {
 		assertThat(reverse.reverse("I am Sam"), equalTo("maS ma I"));
 		assertThat(reverse.reverse("Magic!"), equalTo("!cigaM"));
 	}
+	
+	@Test
+	public void testReverse2() {
+		assertThat(reverse.reverse2("Hello"), equalTo("olleH"));
+		assertThat(reverse.reverse2("I am Sam"), equalTo("maS ma I"));
+		assertThat(reverse.reverse2("Magic!"), equalTo("!cigaM"));
+	}
 
 }

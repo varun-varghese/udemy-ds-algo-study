@@ -17,5 +17,17 @@ public class Reverse {
 		
 		return sb.toString();
 	}
+	
+	public String reverse2(String input) {
+		char[] arr = input.toCharArray();
+		
+		for (int left = 0, right = arr.length - 1; left < right; left++, right--) {
+			char temp = arr[left];
+			arr[left] = arr[right];
+			arr[right] = temp;
+		}
+		
+		return String.valueOf(arr);
+	}
 
 }
