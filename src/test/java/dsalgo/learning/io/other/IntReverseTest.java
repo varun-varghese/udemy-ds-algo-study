@@ -28,5 +28,15 @@ public class IntReverseTest {
 		assertThat(intReverse.reverse(321), equalTo(123));
 		assertThat(intReverse.reverse(0), equalTo(0));
 	}
+	
+	@Test
+	public void testIntReverse2() {
+		assertThat(intReverse.reverse2(121), equalTo(121));
+		assertThat(intReverse.reverse2(-121), equalTo(-121));
+		assertThat(intReverse.reverse2(-321), equalTo(-123));
+		assertThat(intReverse.reverse2(321), equalTo(123));
+		assertThat(intReverse.reverse2(0), equalTo(0));
+	}
+
 
 }

@@ -36,5 +36,22 @@ public class IntReverse {
 			return input < 0 ? (-1 * result) : result;
 		}
 	}
+	
+	public int reverse2(int input) {
+		boolean isNegative = input < 0;
+		
+		if (isNegative) {
+			input = -1 * input;
+		}
+		
+		int reverse = 0;
+		while (input > 0)  {
+			int lastDigit  = input % 10;
+			reverse = (reverse * 10) + lastDigit;
+			input = input / 10;
+		}
+		
+		return isNegative ? (-1 * reverse) : reverse;
+	}
 
 }
