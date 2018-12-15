@@ -50,7 +50,9 @@ public class ValidCardTypes {
 			.filter(Objects::nonNull)
 			.distinct()
 			.collect(Collectors.toList());
-		log.info("| Types found: {}", typesFound);
+		
+		log.debug("| Types found: {}", typesFound);
+		
 		if (typesFound.size() > 0) {
 			return typesFound.get(0);
 		} else {
