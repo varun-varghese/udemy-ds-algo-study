@@ -6,8 +6,10 @@ import java.util.List;
 import java.util.Objects;
 import java.util.stream.Collectors;
 
+import lombok.Data;
 import lombok.extern.slf4j.Slf4j;
 
+@Data
 @Slf4j
 public class ValidCardTypes {
 	
@@ -52,7 +54,7 @@ public class ValidCardTypes {
 		if (typesFound.size() > 0) {
 			return typesFound.get(0);
 		} else {
-			return null;
+			return "Unknown";
 		}
 	}
 	
